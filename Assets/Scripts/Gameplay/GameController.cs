@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ public class GameController : MonoBehaviour {
 
     private ShotCountText shotCountText;
 
-    public Text ballsCountText;
+    public TextMeshProUGUI ballsCountText;
 
     public GameObject[] block;
 
@@ -32,7 +33,7 @@ public class GameController : MonoBehaviour {
     {
         PlayerPrefs.DeleteAll();
         shotCountText = GameObject.Find("ShotCountText").GetComponent<ShotCountText>();
-        ballsCountText = GameObject.Find("BallCountText").GetComponent<Text>();
+        ballsCountText = GameObject.Find("BallCountText").GetComponent<TextMeshProUGUI>();
         ballsContainer = GameObject.Find("BallsContainer");
     }
 

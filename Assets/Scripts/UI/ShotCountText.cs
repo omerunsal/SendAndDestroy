@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +10,13 @@ public class ShotCountText : MonoBehaviour {
 
     private CanvasGroup cg;
 
-    private Text topText, bottomText;
+    private TextMeshProUGUI topText, bottomText;
     
 	void Awake ()
     {
         cg = GetComponent<CanvasGroup>();
-        topText = transform.Find("TopText").GetComponent<Text>();
-        bottomText = transform.Find("BottomText").GetComponent<Text>();
+        topText = transform.Find("TopText").GetComponent<TextMeshProUGUI>();
+        bottomText = transform.Find("BottomText").GetComponent<TextMeshProUGUI>();
         transform.localScale = Vector3.zero;
     }
 	
